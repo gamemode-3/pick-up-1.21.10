@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "pick-up",
+	"version": "${version}",
+	"name": "pick up!",
+	"description": "lets you pick up items right into containers to make inventory management less painful!",
+	"authors": [
+		"gamemode-3"
+	],
+	"contact": {
+		"homepage": "https://github.com/gamemode-3/pick-up-1.21.5",
+		"sources": "https://github.com/gamemode-3/pick-up-1.21.5"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pick-up/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.gamemode3.pickup.PickUp"
+		],
+		"fabric-datagen": [
+			"net.gamemode3.pickup.PickUpDataGenerator"
+		],
+		"client": [
+			"net.gamemode3.pickup.PickUpClient"
+		]
+	},
+	"mixins": [
+		"pick-up.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
